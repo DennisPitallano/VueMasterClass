@@ -15,7 +15,7 @@
             <img class="avatar-large" :src="userById(postById(postId).userId).avatar" alt="">
           </a>
 
-          <p class="desktop-only text-small">107 posts</p>
+          <p class="desktop-only text-small">{{postByUserId(postById(postId).userId).length}} posts</p>
 
         </div>
 
@@ -64,6 +64,9 @@ export default {
     },
     userById (userId) {
       return this.users.find(p => p.id === userId)
+    },
+    postByUserId (userId) {
+      return this.posts.filter(p => p.userId === userId)
     }
   }
 }

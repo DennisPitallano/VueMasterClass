@@ -1,6 +1,7 @@
 import PageHome from '@/components/PageHome'
 import PageThreadShow from '@/components/PageThreadShow'
 import PageNotFound from '@/components/PageNotFound'
+import HelloWorld from '@/components/HelloWorld'
 import { createRouter, createWebHistory } from 'vue-router'
 import sourceData from '@/data.json'
 
@@ -37,6 +38,11 @@ const routes = [
     path: '/:pathMatch(.*)*',
     name: 'NotFound',
     component: PageNotFound
+  },
+  {
+    path: '/hw',
+    name: 'Hello',
+    component: HelloWorld
   }
 ]
 
